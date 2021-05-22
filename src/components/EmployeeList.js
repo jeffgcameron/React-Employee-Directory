@@ -18,10 +18,22 @@ class EmployeeList extends Component {
       .catch((err) => console.log(err));
   }
 
+  employeeSearch = e => {
+      if(e.target.name === "search") {
+          const empSearch = e.target.value.toLowerCase();
+          this.setState({
+              search: empSearch
+          })
+      }
+  }
+
   render() {
     return (
       <div>
-        <SearchForm />
+        <SearchForm 
+        employeeSearch={this.employeeSearch}
+        search={this.state.search}
+        />
 
         
           <table className="table table-responsive text-center table-hover">
@@ -35,8 +47,9 @@ class EmployeeList extends Component {
               </tr>
             </thead>
             
-            {this.state.results && this.state.results.map(employee => 
-
+            {this.state.results.map(employee => 
+            employee.name.first.toLowerCase().includes(this.state.search) || 
+            employee.name.last.toLowerCase().includes(this.state.search) ?
             <tbody key={employee.login.uuid}>
               <tr >
                 <td>
@@ -48,6 +61,8 @@ class EmployeeList extends Component {
                 <td>{employee.email}</td>
               </tr>
               </tbody>
+              :
+              null
             )}
             
           </table>
