@@ -27,6 +27,48 @@ class EmployeeList extends Component {
       }
   }
 
+  sortFirst = () => {
+      const sorted = this.state.results.sort((a, z) => {
+          if(z.name.first > a.name.first) {
+              return -1
+          }
+          if (a.name.first > z.name.first) {
+              return +1
+          }
+          return 0
+      })
+
+      if(this.state.sortOrder === "decending") {
+          sorted.reverse();
+          this.setState({sortOrder:"ascending"})
+      } else {
+          this.setState({sortOrder: "decending"})
+      }
+      this.setState({results: sorted})
+  }
+
+  sortLast = () => {
+
+    console.log("working baby");
+    const sorted = this.state.results.sort((a, z) => {
+        if(z.name.last > a.name.last) {
+            return -1
+        }
+        if (a.name.last > z.name.last) {
+            return +1
+        }
+        return 0
+    })
+
+    if(this.state.sortOrder === "decending") {
+        sorted.reverse();
+        this.setState({sortOrder:"ascending"})
+    } else {
+        this.setState({sortOrder: "decending"})
+    }
+    this.setState({results: sorted})
+  }
+
   render() {
     return (
       <div>
@@ -40,8 +82,8 @@ class EmployeeList extends Component {
             <thead>
               <tr>
                 <th>Image</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>First Name <button onClick = {this.sortFirst} >^</button></th>
+                <th>Last Name <button onClick={this.sortLast}>^</button></th>
                 <th>Phone</th>
                 <th>Email</th>
               </tr>
