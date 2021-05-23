@@ -28,11 +28,6 @@ This application allows the user to search for employees, and sort employees by 
 ## License
 This application is covered under the MIT license.
 
-## Contributing
-
-
-## Tests
-
 
 ## Github
 Visit my Github Profile at https://github.com/jeffgcameron
