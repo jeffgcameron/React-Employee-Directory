@@ -1,0 +1,36 @@
+body {
+    font-family: 'Farro', sans-serif;
+}
+
+table {
+    font-family: 'Farro', sans-serif;
+    background-color: rgb(232, 241, 255);
+}
+
+thead {
+    background-color: rgb(187, 209, 248);
+    vertical-align: middle;
+}
+
+button {
+    background-color:  rgb(172, 125, 169);
+    height: 20px;
+    border-style: none;
+    border-radius: 5px !important;
+    vertical-align: middle;
+}
+
+img {
+    border-radius: 10px;
+}
+
+th {
+    color: rgb(37, 42, 51);
+}
+tr {
+    color: rgb(37, 42, 51);
+}
+
+td {
+    vertical-align: middle;
+}

@@ -1,7 +1,9 @@
 import React from "react";
+import "./search-form.css"
 
 function SearchForm(props) {
     return (
+        <div className="form-section">
         <form>
             <div className="form-group">
                 <input
@@ -16,6 +18,7 @@ function SearchForm(props) {
 
             </div>
         </form>
+        </div>
     );
 }
 

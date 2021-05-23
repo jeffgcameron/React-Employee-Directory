@@ -1,0 +1,23 @@
+body {
+    /* background-color: rgb(172, 125, 169); */
+    text-align: center;
+}
+
+.form-section {
+    background-color: rgb(172, 125, 169) ;
+}
+
+
+form {
+ display: inline-block;
+ width: 50%;
+ margin-bottom: 20px;
+ 
+}
+
+.form-control {
+    text-align: center;
+    font-family: 'Farro', sans-serif;
+    background-color: rgb(232, 241, 255) !important;
+}
+
